@@ -1,0 +1,56 @@
+Difference Between document and window Objects in JavaScript
+
+window Object
+
+Represents: The entire browser window or tab.
+Scope: Global object in the browser environment; all global variables/functions are properties of window.
+
+var x = 10;
+console.log(window.x); // 10
+
+Browser Control: Methods like window.open(), window.alert().
+
+window.open("https://www.example.com");
+window.alert("Hello!");
+
+Properties/Methods: window.location, window.history, setTimeout.
+
+console.log(window.location.href); // Current URL
+
+Events: Handles global events like load, resize.
+
+window.addEventListener("load", function() {
+    console.log("Window loaded");
+});
+
+document Object
+
+Represents: The HTML document loaded in the window.
+DOM Access: Represents the HTML structure as a tree of nodes.
+
+console.log(document.title); // Document title
+
+Element Manipulation: Methods like getElementById(), querySelector().
+
+const elem = document.getElementById("myElement");
+elem.textContent = "Hello, world!";
+
+Attributes/Styles: Modify element attributes and styles.
+
+const elem = document.querySelector(".myClass");
+elem.style.color = "blue";
+
+Events: Handles DOM events.
+
+document.getElementById("myButton").addEventListener("click", function() {
+    console.log("Button clicked");
+});
+
+Conclusion: 
+Scope:
+window: Global scope and browser-level control.
+document: HTML document content and structure.
+
+Primary Use:
+window: Browser actions, global properties, and events.
+document: DOM manipulation and element-specific events.
