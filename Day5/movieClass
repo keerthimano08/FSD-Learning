@@ -1,0 +1,37 @@
+class Movie{
+    constructor(title,studio,rating = "PG"){
+        this.title= title;
+        this.studio= studio;
+        this.rating= rating;
+    }
+    getPG(){
+        let arr =[];
+        if (this.rating = "PG13"){
+            arr = arr + this.title;
+        }
+        return arr;
+        }
+}
+
+const movie1 = new Movie(
+       "Leo",
+       "Seven Screen studio", 
+       "R"
+);
+const movie2 = new Movie(
+    "Casino Royale",
+    "Eon Productions",
+    "PG13"
+)
+const movie3 = new Movie(
+    "Kalki",
+    "Vyjayanthi Movies",
+    "PG13"
+)
+const movie4 = new Movie(
+    "Kaithi",
+    "lk house"
+)
+
+
+console.log(movie3.getPG());
